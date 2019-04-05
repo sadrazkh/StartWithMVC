@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MyAction";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+@section Header{
+<div class="veiw">
+    @foreach (string str in new string[] { "Home", "list", "Edit" })
+    {
+        @Html.ActionLink(str, str, null, new { style = "margin:5px" })
+    }
+</div>
+}
+
+<h2>MyAction</h2>
+
+@foreach (string name in Model)
+{
+    <span><b>@name</b></span>
+}
+
+@section Footer{
+<div class="view">
+    جر خوردم بخدا
+    </div>
+}

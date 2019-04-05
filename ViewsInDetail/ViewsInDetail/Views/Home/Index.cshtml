@@ -1,0 +1,30 @@
+﻿@*@Model IEnumerable<string>*@
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+
+            List of Fruits :
+
+            @foreach (string name in Model)
+            {
+                <span><b>@name</b></span>
+            }
+
+            @*@for(int i=0;i<=2;i++)
+            {
+                <span><b>@Model[i]</b></span>
+            }*@
+
+        </div>
+    </body>
+</html>
